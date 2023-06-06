@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a3e6c2c6-6690-48b7-a61c-f554b872a548" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51169/ServiceRecetaAlumno.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceRecetaAlumno.xsd" MetadataType="Schema" ID="214f050d-746b-4ae6-81f5-c880dece1d1e" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?xsd=xsd4" />
+    <MetadataFile FileName="ServiceRecetaAlumno.disco" MetadataType="Disco" ID="3f82ec85-2b86-4f0a-96f7-98933d5d0d87" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?disco" />
+    <MetadataFile FileName="ServiceRecetaAlumno.wsdl" MetadataType="Wsdl" ID="5970de25-92a8-4ec8-a621-35400f1b05e5" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?wsdl" />
+    <MetadataFile FileName="ServiceRecetaAlumno1.xsd" MetadataType="Schema" ID="f747cc29-249f-4517-9ed3-5f2a30f1f5d8" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceRecetaAlumno2.xsd" MetadataType="Schema" ID="305f6346-467e-42b1-baed-ae8ca3e662ce" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceRecetaAlumno3.xsd" MetadataType="Schema" ID="a64e32b9-1569-4487-b91a-5d8266335ddb" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceRecetaAlumno4.xsd" MetadataType="Schema" ID="5ad6e0fd-7244-4031-9e91-a2d9c06cbbf3" SourceId="1" SourceUrl="http://localhost:51169/ServiceRecetaAlumno.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,71 @@
+﻿@model ML.RecetaAlumno
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 style="color:blue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Ingrese los datos de la receta a agregar y a continuación seleccione Guardar, de lo contrario seleccione Regresar</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm("Form", "Receta", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.IdRecetaAlumno, new { @class = "hidden" })
+                            @Html.TextBoxFor(model => model.IdRecetaAlumno, new { @class = "hidden form-control", autocomplete = "off" })
+                            @Html.ValidationMessageFor(model => model.IdRecetaAlumno)
+                            @*hidden*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.Receta.Fecha)
+                            @Html.TextBoxFor(model => model.Receta.Fecha, new { @class = "form-control", @id = "txtFecha" })
+                            @Html.ValidationMessageFor(model => model.Receta.Fecha, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.Receta.Diagnostico)
+                            @Html.TextBoxFor(model => model.Receta.Diagnostico, new { @class = "form-control", @id = "txtDiagnostico" })
+                            @Html.ValidationMessageFor(model => model.Receta.Diagnostico, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => model.Receta.Tratamiento)
+                            @Html.TextBoxFor(model => model.Receta.Tratamiento, new { @class = "form-control", @id = "txtTratamiento" })
+                            @Html.ValidationMessageFor(model => model.Receta.Tratamiento, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Alumno)
+                            @Html.DropDownListFor(model => model.Alumno.Matricula, new SelectList(Model.Alumno.Alumnos, "Matricula", "NombreCompleto"), "Selecciona una opción", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Alumno.Matricula, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <input type="submit" value="Guardar" class="btn btn-success" />
+                            @*@Html.ActionLink("Regresar", "GetAll", "RecetaAlumno", htmlAttributes: new { @class = "btn btn-danger" })*@
+                        </div>
+                    </div>
+                </div>
+
+
+                }
+
+
+        </div>
+        </div>
+</div>
+

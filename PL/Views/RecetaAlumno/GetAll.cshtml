@@ -1,0 +1,47 @@
+﻿@model ML.RecetaAlumno
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="=col-md-12">
+                <h2 style="color:blue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align:center">Recetas - Alumnos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered table-responsive">
+                    <thead class="thead-dark">
+                        <tr>
+                            <td class="hidden">IdRecetasAlumno</td>
+                            <td>IdReceta</td>
+                            <td>Matricula </td>
+                            <td>Nombre</td>
+                            <td>Apellido Paterno</td>
+                            <td>Apellido Materno</td>
+                            <td>Fecha Nacimiento</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (ML.RecetaAlumno recetaAlumno in Model.RecetasAlumnos)
+                        {
+                            <tr>
+                                <td class="hidden">@recetaAlumno.IdRecetaAlumno</td>
+                                <td>@recetaAlumno.Receta.IdReceta</td>
+                                <td>@recetaAlumno.Alumno.Matricula</td>
+                                <td>@recetaAlumno.Alumno.Nombre</td>
+                                <td>@recetaAlumno.Alumno.ApellidoPaterno</td>
+                                <td>@recetaAlumno.Alumno.ApellidoMaterno</td>
+                                <td>@recetaAlumno.Alumno.FechaNacimiento</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
